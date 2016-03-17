@@ -11,3 +11,6 @@ deploy:
   skip_cleanup: true
   on:
     repo: utwente-fmt/histogram
+    tags: true  
+
+
