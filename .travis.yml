@@ -1,6 +1,10 @@
 language: java
-
 script:
-  - ant jar
-
-
+- ant jar
+deploy:
+  provider: releases
+  api_key:
+    secure: nwzAAzkYjfgav6gvIo8EhMqhuBEQzgmozaPMeSSSAUFo6+YFDviVr+dPrWvfNa9Xfc2bD5e/U7Mc5022k0IRxK6JtWQCruHwjBslcmvW5LVx33RkUnIfGe4Iw9ddov01/9h0jrZkcPYPp3nKpmHr0m8QIEMaEuh3owGa6jsapOT6VGN3EYyFx0isDc0maPc72Cr/cop9MLDwIhgWuxU25jgDn6gid3tKmdNtv65iKcIgLQJvoqnUQGqMQt09e6IapoJcf71tpiuyWYJ4YxF1Kw3t3poS9ABO2cDCc8h/6G8c/PExTy4hqymougd+1nh0pDia41jXf0nVhf/I5Az4+cAk3ewN/fCh5rxpJctzGrEFu3URn+Ip8NkWLdt4pSRFWCSS4my5E6HfEAko+TTUcv1t2QyUpGlhsWagNGDfVPaPk3igYrD5G9sOT6CQfY8OTZVtIi2UROKLWASJy8R9e6/QXpMhTnlHhM5X59A03+L/8MB0nl40uVwBQfKnGaEr/iwfOlr/GwIgnS9VwfDugh3U/JqoC1qew4oSNMcLy6RqVv7HFIDbKrYFK+vh9J4QWF2tzywHjiR33LJUXpvH1JWLoiqo972kgGTlEBk1imV3FKiwj1ZvVoCE6JIsXKYWGAlXhSadqNtw2eVhAB9ZuXzS+P+dA14F0g6FNNPxW8Y=
+  file: ''
+  on:
+    repo: utwente-fmt/histogram
