@@ -1,0 +1,70 @@
+<!-- -*- tab-width:2 ; indent-tabs-mode:nil -*-
+  -->
+<project name="Histogram" default="jar">
+
+  <!-- directory definition -->
+
+  <property name="src"          value="${basedir}/src"/>
+  <property name="bin"          value="${basedir}/bin"/>
+  <property name="libs"         value="${basedir}/libs"/>
+	<property name="dist"         value="${basedir}/dist"/>
+
+  <!-- ================================== -->
+  <!--            Build jar file          -->
+  <!-- ================================== -->
+  
+	<target name="jar-build" description="Generate the jar file">
+		<jar destfile="${basedir}/histogram.jar" >
+	    <manifest>
+        <attribute name="Main-Class" value="root.Main"/>
+        <attribute name="Built-By" value="${user.name}"/>
+      </manifest>
+		  <fileset dir="${bin}">
+		  	<include name="**" />
+		  </fileset>
+		  <zipfileset src="${libs}/asm.jar" excludes="META-INF/*" />
+		  <zipfileset src="${libs}/asm-commons-3.3.1.jar" excludes="META-INF/*" />
+		  <zipfileset src="${libs}/commons-cli-1.2.jar" excludes="META-INF/*" />
+      <zipfileset dir="license-info" prefix="license-info"
+        includes="**/*.txt"
+      />
+		</jar>
+	</target>
+	
+  <!-- ================================== -->
+  <!--    compile and build jar file      -->
+  <!-- ================================== -->
+  
+	<target name="jar" description="Compile and Generate the jar file">
+	  <antcall target="compile"/>
+		<antcall target="jar-build"/>
+	</target>
+	
+  <!-- ================================== -->
+  <!--              COMPILE               -->
+  <!-- ================================== -->
+
+  <target name="compile">
+    <mkdir dir="${bin}"/>
+    <javac srcdir="${src}"
+           destdir="${bin}"
+           classpath="${libs}/asm.jar:${libs}/asm-commons-3.3.1.jar:${libs}/commons-cli-1.2.jar"
+           debug="on"
+           includeAntRuntime="false"
+           source="1.7"
+           target="1.7">
+      <include name="**/*.java"/>
+    </javac>
+  </target>
+
+  <!-- ================================== -->
+  <!--               CLEAN                -->
+  <!-- ================================== -->
+
+  <target name="clean">
+    <delete dir="${bin}"/>
+  </target>
+  
+	
+</project>
+

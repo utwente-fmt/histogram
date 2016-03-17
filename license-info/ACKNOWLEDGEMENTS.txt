@@ -1,0 +1,23 @@
+
+The following research projects contributed to this tool:
+
+* CHARTER project, Artemis grant 2008-100039
+* VerCors project, ERC grant 258405
+
+The following universities and research institutes have contributed:
+
+* Dundalk Institute of Technology
+* IT University of Copenhagen
+* Lero
+* University of Twente
+
+The following people have contributed:
+
+* Joseph Kiniry
+* Stefan Blom
+
+The following external libraries were used:
+
+* Apache commons CLI (see license-info/cli)
+* ASM library (see license-info/asm)
+

@@ -1,0 +1,17 @@
+.classpath
+.DS_Store
+.externalToolBuilders
+.fbprefs
+.metadata
+.pmd
+.project
+.settings
+jmlbin/*
+*~
+bin/*
+build/*
+dist/*
+docs/*
+histogram.jar
+histogram-single.jar
+
