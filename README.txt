@@ -1,5 +1,6 @@
 Histogram is a very simple tool that compute the number of times
 any class or method is used by a given body of Java byte code.
+See also: http://fmt.ewi.utwente.nl/tools/histogram
 
 Contained in the jar archive is everything one needs to run the tool as:
 
