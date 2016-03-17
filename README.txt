@@ -1,6 +1,4 @@
-# histogram
-Produce histograms of class and method use in JVM byte code
-
+The official web page of the tool is: http://fmt.ewi.utwente.nl/tools/histogram
 
 Contained in the jar archive is everything one needs to run the tool as:
 
